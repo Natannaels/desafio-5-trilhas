@@ -1,4 +1,4 @@
-import mongoose, {mongo} from "mongoose";
+import mongoose from "mongoose";
 
 //faz requisição, por isso precisa de async
 async function dbConnect(){
