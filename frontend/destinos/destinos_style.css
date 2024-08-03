@@ -16,10 +16,11 @@
 }
 
 body {
-    color: black;
+    color: var(--dark);
     background: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
+
 .navigation {
     display: flex;
     align-items: center;
@@ -27,13 +28,13 @@ body {
     padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem red;
     width: 100%;
-    background: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background: rgba(255, 255, 255, 0.8);
+    /* Branco transparente */
     transition: all 0.5s;
     position: fixed;
     top: 0;
-    left: 0;
-    z-index: 1;
+    right: 0;
+    z-index: 1000;
 }
 
 .navigation .logo {
@@ -93,14 +94,15 @@ body {
 }
 
 .destinos {
-    padding: 9rem 15rem 4rem; 
+    padding: 9rem 15rem 4rem;
 }
+
 .destinos h1 {
     font-size: 1.5rem;
     color: red;
     margin-bottom: 1.5rem;
-    
 }
+
 .destinos .wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,10 +126,12 @@ body {
     box-shadow: 0 0 15px var(--main-color);
     margin-bottom: 1rem;
 }
-.destinos .wrapper h1{
+
+.destinos .wrapper h1 {
     font-size: 2rem;
-    color:red;
+    color: red;
 }
+
 .destinos-item h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -154,60 +158,70 @@ body {
     color: white;
     transform: scale(1.05);
 }
-/* Media Query for Tablets */
-@media (max-width: 1024px) {
-    .destinos {
-        padding: 10rem 5rem 4rem;
-    }
 
-    .destinos .wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-}
-
-/* Media Query for Mobile Devices */
+/* Responsividade */
 @media (max-width: 768px) {
     .navigation ul {
         display: none;
         flex-direction: column;
-        width: 100%;
         position: absolute;
-        top: 60px;
-        left: 0;
-        background: #c9d6ff;
-        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-        box-shadow: 0 0.1rem 0.5rem red;
+        top: 80px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.8);
+        width: 40%;
+        text-align: center;
     }
 
     .navigation ul.show {
         display: flex;
     }
 
+    .navigation ul li {
+        margin: 10px 0;
+    }
+
     .menu {
         display: block;
     }
 
-    .destinos {
-        padding: 10rem 2rem 4rem;
+    .menu.ativo .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .destinos .wrapper {
-        grid-template-columns: 1fr;
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .destinos {
+        padding: 10rem 7rem 4rem;
     }
 
     .destinos h1 {
-        font-size: 2rem;
+        font-size: 20px;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .destinos .wrapper {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        justify-content: center;
     }
 
-    .destinos-item h2 {
-        font-size: 2rem;
+    .destinos-item {
+        background: white;
+        backdrop-filter: blur(10px);
+        border: 3px solid #c9d6ff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        text-align: center;
+        color: var(--text-color);
+        transition: 0.4s ease-in-out;
     }
 
-    .destinos-item p {
-        font-size: 1.4rem;
-    }
-
-    .destinos-item a {
-        font-size: 1.2rem;
-    }
 }

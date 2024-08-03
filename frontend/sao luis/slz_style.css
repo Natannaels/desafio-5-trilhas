@@ -153,12 +153,6 @@ body {
 }
 
 @media (max-width: 785px) {
-    .carousel {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 785px) {
     .navigation {
         padding: 18px 20px;
     }
@@ -181,17 +175,15 @@ body {
 
     .nav-menu {
         position: fixed;
-        right: -100%;
-        top: 70px;
-        width: 50%;
-        /* Ajuste a largura para ocupar metade da tela */
-        height: 100%;
+        right: -200%;
+        top: 80px;
+        width: 30%;
+        height: 35%;
         flex-direction: column;
-        background: var(--white);
+        background: rgba(254, 254, 254, 0.9);
         gap: -10px;
         transition: 0.3s;
     }
-
     .nav-menu.ativo {
         right: 0;
     }
@@ -201,11 +193,11 @@ body {
     }
 
     .home {
-        padding: 100px 2%;
+        padding: 100px 0.5%;
         flex-direction: column;
         text-align: center;
         overflow: hidden;
-        gap: 5rem;
+        gap: 2rem;
     }
 
     .home .text-h4 {
@@ -220,8 +212,9 @@ body {
     .home p {
         font-size: 15px;
     }
+    .home img{
+        width: 42%;
 
-    .home-img {
-        width: 125%;
     }
+
 }
