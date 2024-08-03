@@ -1,6 +1,7 @@
 import express from 'express';
 import dbConnect from './config/dbConfig.js';
 import routes from './routes/index.js';
+import authRoutes from './routes/authRoutes.js';
 
 
 const conexao = await dbConnect(); //funções assíncronas precisam de um await
@@ -14,8 +15,8 @@ conexao.once('open', () => {
 });
 
 const app = express();
-routes(app);
 
+routes(app);
 
 export default app;
 
