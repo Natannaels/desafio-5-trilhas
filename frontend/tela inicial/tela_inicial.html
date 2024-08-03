@@ -7,17 +7,19 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/frontend/tela inicial/tela_inicial_style.css">
     <title>Turismo MA</title>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+ 
 </head>
 <body>
     <header>
         <nav class="navigation">
+            <!-- Logo do site -->
             <a href="/frontend/tela inicial/tela_inicial.html" class="logo">Turismo <span class="cor">M<span>A</span> </span></a>
+            <!-- Menu de navegação -->
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="/frontend/destinos/destinos.html">Destinos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
             </ul>
+            <!-- Ícone do menu para dispositivos móveis -->
             <div class="menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -28,27 +30,27 @@
     <main>
         <section class="home">
             <div class="home-text">
+                <!-- Texto de boas-vindas e introdução -->
                 <h4 class="text-h4">Bem vindo ao Turismo <span class="blue">M</span><span class="red">A</span></h4>
                 <h1 class="text-h1">Que tal curtir as férias no Maranhão?</h1>
-                <p>Descubra nossas belezas naturais, desfrute da nossa rica culinária e conheça nossa culltura. Escolha seu próximo destino de viagem aqui, venha nos conhecer!</p>
+                <p>Descubra nossas belezas naturais, desfrute da nossa rica culinária e conheça nossa cultura. Escolha seu próximo destino de viagem aqui, venha nos conhecer!</p>
+                <!-- Botão para começar a explorar os destinos -->
                 <a href="/frontend/destinos/destinos.html" class="home-btn">Começar</a>
             </div>
             <div class="carousel">
+                <!-- Carrossel de imagens -->
                 <div class="carousel-images">
                     <img src="/frontend/assets/espigao 1.jpg" alt="Imagem 1">
-                    <img src="/frontend/assets/lençois.avif" alt="">
-                    <img src="/frontend/assets/slz ma.avif" alt="Imagem 3">
-                    <img src="/frontend/assets/centro 1.jpg" alt="">
-                    <img src="/frontend/assets/alcantara.jpeg" alt="">
+                    <img src="/frontend/assets/lençois.avif" alt="Imagem dos Lençóis Maranhenses">
+                    <img src="/frontend/assets/slz ma.avif" alt="Imagem de São Luís">
+                    <img src="/frontend/assets/centro 1.jpg" alt="Imagem do Centro Histórico">
+                    <img src="/frontend/assets/alcantara.jpeg" alt="Imagem de Alcântara">
                 </div>
                 <button class="carousel-button prev" id="prev-button">&#10094;</button>
                 <button class="carousel-button next" id="next-button">&#10095;</button>
             </div>
         </section>
-
-    
     </main>
-<script src="/frontend/tela inicial/carousel_script.js"></script>
-<script src="/frontend/tela inicial/tela_inicial_script.js"></script>
+    <script src="/frontend/tela inicial/tela_inicial_script.js"></script>
 </body>
 </html>
