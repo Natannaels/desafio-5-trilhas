@@ -132,8 +132,11 @@ body {
     background: #fc4c35;
 }
 
-.home-img img {
-    width: 100%;
+.home img {
+    width: 30%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
 }
 
 .home-text .text-h4 {
@@ -151,6 +154,7 @@ body {
     color: red;
     /* Cor vermelha para o "A" */
 }
+
 
 @media (max-width: 785px) {
     .navigation {
@@ -193,7 +197,7 @@ body {
     }
 
     .home {
-        padding: 79px 10%;
+        padding: 100px 0.5%;
         flex-direction: column;
         text-align: center;
         overflow: hidden;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Reseta estilos padrão e define a fonte Poppins */
 * {
     margin: 0;
     padding: 0;
@@ -9,72 +10,74 @@
     text-decoration: none;
 }
 
+/* Variáveis de cor para uso no site */
 :root {
     --red: #d63a25;
     --white: #fff;
     --dark: #1e1c2a;
 }
 
+/* Estilo global do body */
 body {
     color: var(--dark);
     background: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
 }
 
+/* Estilo do cabeçalho de navegação */
 .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem red;
+    box-shadow: 0 0.1rem 0.5rem red; /* Sombra para destacar o cabeçalho */
     width: 100%;
     background: #c9d6ff;
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    transition: all 0.5s;
-    position: fixed;
+    transition: all 0.5s; /* Transição suave para mudanças */
+    position: fixed; /* Fixa o cabeçalho no topo */
 }
 
+/* Estilo do logo dentro da navegação */
 .navigation .logo {
     color: black;
     font-size: 1.7rem;
     font-weight: 600;
 }
 
-.logo span {
-    color: blue;
-}
-
-.cor span {
-    color: red;
-}
-
+/* Estilo do menu de navegação */
 .navigation ul {
     display: flex;
     align-items: center;
     gap: 5rem;
 }
 
+/* Estilo dos links do menu de navegação */
 .navigation ul li a {
     color: blue;
     font-size: 17px;
     font-weight: 500;
-    transition: all 0.5s;
+    transition: all 0.5s; /* Transição suave para o efeito hover */
 }
 
+/* Estilo do efeito hover dos links do menu */
 .navigation ul li a:hover {
     color: red;
 }
 
+/* Estilo dos ícones na navegação */
 .navigation i {
     cursor: pointer;
     font-size: 1.5rem;
 }
 
+/* Estilo do menu para dispositivos móveis */
 .menu {
     cursor: pointer;
-    display: none;
+    display: none; /* Oculta o menu em telas grandes */
 }
 
+/* Estilo das barras do menu */
 .menu .bar {
     display: block;
     width: 28px;
@@ -85,11 +88,13 @@ body {
     transition: all 0.3s;
 }
 
+/* Estilo das barras do menu no estado ativo */
 .menu .bar:nth-child(1),
 .menu .bar:nth-child(3) {
     background: red;
 }
 
+/* Estilo da seção home */
 .home {
     width: 100%;
     height: 100vh;
@@ -99,6 +104,7 @@ body {
     padding: 0px 10%;
 }
 
+/* Estilo do texto na seção home */
 .home-text {
     max-width: 37rem;
 }
@@ -119,6 +125,7 @@ body {
     margin-bottom: 4rem;
 }
 
+/* Estilo do botão na seção home */
 .home-btn {
     padding: 15px 45px;
     background: red;
@@ -128,71 +135,34 @@ body {
     transition: all 0.5s;
 }
 
+/* Estilo do botão no efeito hover */
 .home-btn:hover {
     background: #fc4c35;
 }
-.home-img {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Espaço entre as imagens */
-}
 
-.home-img img {
-    width: 100%;
-    max-width: 500px; /* Limite de largura para imagens */
-    margin: 0 auto;
-}
-.home-img img:first-child {
-    height: auto;
-}
-
-.home-img img:last-child {
-    height: auto;
-}
-
-.home-text .text-h4 {
-    font-size: 1.5rem;
-    color: blue;
-    margin-bottom: 1rem;
-}
-
-.home-text .text-h4 .blue {
-    color: blue;
-    /* Cor azul para o "M" */
-}
-
-.home-text .text-h4 .red {
-    color: red;
-    /* Cor vermelha para o "A" */
-}
-
+/* Estilo do carrossel de imagens */
 .carousel {
     position: relative;
     width: 100%;
     max-width: 400px;
-    /* Ajuste o tamanho conforme necessário */
     margin: 0 auto;
-    /* Centraliza o carrossel */
     overflow: hidden;
     border-radius: 10px;
 }
 
 .carousel-images {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Transição suave entre imagens */
     width: 100%;
-    /* Para garantir que o container se ajuste corretamente */
 }
 
 .carousel-images img {
     width: 100%;
     flex-shrink: 0;
-    /* Impede que as imagens encolham */
     display: block;
 }
 
-/* Estilo para as setas (ocultas) */
+/* Estilo dos botões do carrossel */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -207,6 +177,7 @@ body {
     z-index: 1;
 }
 
+/* Estilo dos botões prev e next do carrossel */
 .carousel-button.prev {
     left: 10px;
 }
@@ -215,46 +186,47 @@ body {
     right: 10px;
 }
 
-/* As setas não aparecerão */
+/* Oculta os botões do carrossel por padrão */
 .carousel-button {
     display: none;
 }
 
+/* Estilos específicos para telas pequenas */
 @media (max-width: 785px) {
     .navigation {
         padding: 18px 20px;
     }
 
     .menu {
-        display: block;
+        display: block; /* Mostra o menu em telas pequenas */
     }
 
     .menu.ativo .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg); /* Transformação para o ícone de menu ativo */
     }
 
     .menu.ativo .bar:nth-child(2) {
-        opacity: 0;
+        opacity: 0; /* Oculta a barra do meio no ícone de menu ativo */
     }
 
     .menu.ativo .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg); /* Transformação para o ícone de menu ativo */
     }
 
     .nav-menu {
         position: fixed;
-        right: -200%;
+        right: -200%; /* Inicialmente fora da tela */
         top: 80px;
         width: 20%;
-        height: 35%;
+        height: 20%;
         flex-direction: column;
         background: rgba(254, 254, 254, 0.9);
         gap: -10px;
-        transition: 0.3s;
+        transition: 0.3s; /* Transição suave para abrir e fechar o menu */
     }
 
     .nav-menu.ativo {
-        right: 0;
+        right: 0; /* Move o menu para dentro da tela quando ativo */
     }
 
     .nav-item {
@@ -281,5 +253,4 @@ body {
     .home p {
         font-size: 15px;
     }
-    
 }

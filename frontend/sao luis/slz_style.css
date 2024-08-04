@@ -151,6 +151,25 @@ body {
     color: red;
     /* Cor vermelha para o "A" */
 }
+/* CSS existente */
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    max-width: 600px;
+}
+
 
 @media (max-width: 785px) {
     .navigation {
@@ -216,5 +235,5 @@ body {
         width: 42%;
 
     }
-
+   
 }
