@@ -13,23 +13,23 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="register-form">
                 <h1>Criar Conta</h1>
                 <span>Use seu email para cadastrar</span>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
-                <button>Cadastre-se</button>
+                <input type="text" id="register-name" name="Nome" placeholder="Nome" required>
+                <input type="email" id="register-email" name="Email" placeholder="Email" required>
+                <input type="password" id="register-password" name="Senha" placeholder="Senha" required>
+                <button type="submit">Cadastre-se</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="login-form">
                 <h1>Login</h1>
                 <span>Use seu email e senha</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Senha">
+                <input type="email" id="login-email" name="Email" placeholder="Email" required>
+                <input type="password" id="login-password" name="Senha" placeholder="Senha" required>
                 <a href="#">Esqueceu sua senha?</a>
-                <button>Entrar</button>
+                <button type="submit">Entrar</button>
             </form>
         </div>
         <div class="toggle-container">
