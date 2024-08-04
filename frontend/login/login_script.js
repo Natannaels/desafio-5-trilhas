@@ -33,7 +33,7 @@ registerForm.addEventListener('submit', async (event) => {
         const result = await response.json();
         alert(result.message);
         if (response.ok) {
-            // Adicionar lógica para redirecionar ou limpar o formulário, se necessário
+            registerForm.reset();
         }
     } catch (error) {
         alert('Erro ao registrar usuário');
@@ -57,10 +57,11 @@ loginForm.addEventListener('submit', async (event) => {
         });
         const result = await response.json();
         if (response.ok) {
-            alert(result.message);
-            // Redirecionar ou armazenar o token
+            //alert(result.message);
+            // Armazenar o token no localStorage
             localStorage.setItem('token', result.token);
-            // Adicione redirecionamento ou ações após login bem-sucedido
+            // Redirecionar para a página inicial
+            window.location.href = '/frontend/tela inicial/tela_inicial.html';
         } else {
             alert(result.message);
         }
