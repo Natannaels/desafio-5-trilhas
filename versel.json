@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/**/*",
+        "use": "@vercel/static",
+        "config": {
+          "distDir": "frontend"
+        }
+      },
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/frontend/login/login.html"
+      }
+    ]
+  }
+  
