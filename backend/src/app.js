@@ -2,12 +2,12 @@ import express from 'express';
 import dbConnect from './config/dbConfig.js';
 import routes from './routes/index.js';
 import authRoutes from './routes/authRoutes.js';
+import cors from 'cors'; // Adicionando cors para permitir requisições entre origens diferentes
 
-
-const conexao = await dbConnect(); //funções assíncronas precisam de um await
+const conexao = await dbConnect(); // funções assíncronas precisam de um await
 
 conexao.on('error', (erro) => {
-     console.error('Erro de conexão', erro);
+    console.error('Erro de conexão', erro);
 });
 
 conexao.once('open', () => {
@@ -16,12 +16,16 @@ conexao.once('open', () => {
 
 const app = express();
 
+// Configuração para servir arquivos estáticos da pasta 'public'
+app.use(express.static('public'));
+
+// Habilitar CORS
+app.use(cors());
+
+// Middleware para analisar JSON
+app.use(express.json());
+
+// Roteamento
 routes(app);
 
 export default app;
-
-/*
-app.get('/', (req, res) => res.send("Hello World"));
-
-app.listen(3000);
-*/
