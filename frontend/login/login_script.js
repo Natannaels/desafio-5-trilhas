@@ -25,7 +25,7 @@ registerForm.addEventListener('submit', async (event) => {
     };
 
     try {
-        const response = await fetch('https://api.render.com/deploy/srv-cqo1bfrv2p9s73aiur70?key=tSu4N7-LSZs/register', {
+        const response = await fetch('https://desafio-5-trilhas.onrender.com/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -50,7 +50,7 @@ loginForm.addEventListener('submit', async (event) => {
     };
 
     try {
-        const response = await fetch('https://api.render.com/deploy/srv-cqo1bfrv2p9s73aiur70?key=tSu4N7-LSZs/login', {
+        const response = await fetch('https://desafio-5-trilhas.onrender.com/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
